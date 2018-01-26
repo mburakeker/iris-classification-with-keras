@@ -2,8 +2,6 @@ from keras.models import Sequential
 from keras.layers import Dense
 from sklearn.preprocessing import LabelEncoder
 from keras.utils import np_utils
-from sklearn.model_selection import cross_val_score
-from sklearn.model_selection import KFold
 import numpy as np
 import pandas as pd
 np.random.seed(7)
