@@ -9,12 +9,7 @@ df = pd.read_csv("iris.csv")
 X = df.drop(["class"],axis=1)
 Y = df['class'].map({'Iris-setosa': 0, 'Iris-versicolor': 1, 'Iris-virginica': 2})
 
-encoder = LabelEncoder()
-encoder.fit(Y)
-encoded_Y = encoder.transform(Y)
-
-dummy_y = np_utils.to_categorical(encoded_Y)
-
+dummy_y = np_utils.to_categorical(Y)
 
 model = Sequential()
 model.add(Dense(8, input_dim=4, activation='relu'))
